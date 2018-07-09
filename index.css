@@ -1,0 +1,216 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.7;
+}
+
+.header {
+    height: 100vh;
+    background-image: url(./img/hell2.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.header__text-box {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header__arrow {
+    border: solid black;
+    border-width: 0 0.3rem 0.3rem 0;
+    display: inline-block;
+    padding: 1rem;
+    margin: 1rem 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    animation-name: blinkingArrow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;    
+}
+
+@keyframes blinkingArrow {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.heading-primary {
+    text-transform: uppercase;
+    margin-bottom: 6rem;
+}
+
+.heading-primary--main {
+    display: block;
+    font-size: 5rem;
+    font-weight: 300;
+    letter-spacing: 1.2rem;
+}
+
+.heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 1.2rem;
+}
+
+.main {
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.about {
+    padding: 5rem 0;
+}
+
+.about__heading {
+    text-transform: uppercase;
+    font-size: 6rem;
+    font-weight: 300;
+}
+
+.about__text {
+    font-size: 1.6rem;
+}
+
+.projects {
+    padding: 2.5rem 0;
+}
+
+.projects__heading {
+    text-transform: uppercase;
+    font-size: 6rem;
+    font-weight: 300;
+}
+
+.projects__image {
+    width: 100%;
+}
+
+.projects__description {
+    font-size: 1.6rem;
+    margin: 3rem 0;
+}
+
+.projects__links > * {
+    margin-right: 1rem;
+}
+
+.contact {
+    padding: 2.5rem 0 5rem;
+}
+
+.contact__heading {
+    text-transform: uppercase;
+    font-size: 6rem;
+    font-weight: 300;
+}
+
+.contact__text {
+    font-size: 1.6rem;
+}
+
+.contact__links > * {
+    margin-right: 1rem;
+}
+
+.last-image-wrap {
+    padding-top: 5rem;
+    background-image: url(./img/heavenyo.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.footer {
+    height: 10rem;
+    background-color: #222;
+    color: white;
+    position: relative;
+}
+
+.footer__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.6rem;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: #8A0A0A
+}
+
+a:hover,
+a:active {
+    color: rgba(138, 10, 10, 0.8);
+}
+
+i {
+    font-size: 2rem;
+}
+
+/* MEDIA QUERIES */
+
+/* TAB-LAND */
+@media screen and (max-width: 75em) {
+    html {
+        font-size: 56.25%;
+    }
+}
+
+/* TAB-PORT */
+@media screen and (max-width: 56.25em) {
+    html {
+        font-size: 50%;
+    }
+}
+
+/* BIG DESKTOP */
+@media screen and (min-width: 112.5em) {
+    html {
+        font-size: 75%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .main {
+        margin: 0 1rem;
+    }
+}
+
+/* PHONE */
+@media screen and (max-width: 37.5em) {
+    .heading-primary--main {
+        letter-spacing: 1rem;
+        font-size: 5rem;
+    }
+    .heading-primary--sub {
+        letter-spacing: .5rem;
+    }
+}
