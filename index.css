@@ -6,8 +6,8 @@
   box-sizing: inherit;
 }
 
-html {
-    font-size: 62.5%;
+html {  
+    font-size: 50%;
 }
 
 body {
@@ -65,21 +65,20 @@ body {
 
 .heading-primary--main {
     display: block;
-    font-size: 5rem;
     font-weight: 300;
-    letter-spacing: 1.2rem;
+    letter-spacing: 1rem;
+    font-size: 5rem;
 }
 
 .heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 300;
-    letter-spacing: 1.2rem;
+    letter-spacing: .5rem;
 }
 
 .main {
-    max-width: 75rem;
-    margin: 0 auto;
+    margin: 0 1rem;
 }
 
 .about {
@@ -162,6 +161,7 @@ body {
 
 a:link,
 a:visited {
+    font-size: 1.8rem;
     text-decoration: none;
     color: #8A0A0A
 }
@@ -172,22 +172,26 @@ a:active {
 }
 
 i {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 /* MEDIA QUERIES */
 
-/* TAB-LAND */
-@media screen and (max-width: 75em) {
-    html {
-        font-size: 56.25%;
+/* PHONE */
+@media screen and (min-width: 37.5em) {
+    .heading-primary--main {
+        font-size: 5rem;
+        letter-spacing: 1.2rem;
+    }
+    .heading-primary--sub {
+        letter-spacing: 1.2rem;
     }
 }
 
-/* TAB-PORT */
-@media screen and (max-width: 56.25em) {
-    html {
-        font-size: 50%;
+@media screen and (min-width: 700px) {
+    .main {
+        max-width: 75rem;
+        margin: 0 auto;
     }
 }
 
@@ -198,19 +202,16 @@ i {
     }
 }
 
-@media screen and (max-width: 700px) {
-    .main {
-        margin: 0 1rem;
+/* TAB-PORT */
+@media screen and (min-width: 56.25em) {
+    html {
+        font-size: 56.25%;
     }
 }
 
-/* PHONE */
-@media screen and (max-width: 37.5em) {
-    .heading-primary--main {
-        letter-spacing: 1rem;
-        font-size: 5rem;
-    }
-    .heading-primary--sub {
-        letter-spacing: .5rem;
+/* TAB-LAND */
+@media screen and (min-width: 75em) {
+    html { 
+        font-size: 62.5%;
     }
 }
